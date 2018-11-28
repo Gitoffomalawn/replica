@@ -49,7 +49,6 @@ function abort_normal {
 }
 
 function abort_abnormal {
-    cd - > /dev/null
     exit 1
 }
 
@@ -128,7 +127,7 @@ function help {
     exit 0
 }
 
-while getopts ":s:d:b:t:a:p:luh" options; do
+while getopts ":s:d:b:t:a:p:ABh" options; do
     case "${options}" in
         s)
           src=${OPTARG}
